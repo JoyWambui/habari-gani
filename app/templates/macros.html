@@ -2,7 +2,7 @@
 
     {% for news_source in sources_list %}
         <ul>
-            <li>Name: {{news_source.name}}</li>
+            <li>Name: <a href="articles/{{news_source.id}}">{{news_source.name}}</a></li>
             <li>Description: {{news_source.description}}</li>
             <li>Website: <a href="{{news_source.url}}">{{news_source.url}}</a></li>
             <li>Type of News: {{news_source.category}}</li>

@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block content %}
+<h2>Featured Articles: </h2>
+{% for article in articles_list %}
+    <ul>
+        <li><img src="{{article.image_url}}" alt="{{article.image_url}}"></li>
+        <li>Title: {{article.title}}</li>
+        <li>Overview: {{article.article_description}}</li>
+        <li><a href="{{article.article_url}}">Read More...</a></li>
+        <li>Date Published: {{article.published}}</li>
+    </ul>
+{% endfor %}
+
+{% endblock %}

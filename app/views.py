@@ -9,12 +9,12 @@ def index():
    title = "Home of all your News Needs"
    return render_template("index.html",title=title,sources=news_sources)
 
-@app.route('/articles/<int:id>')
+@app.route('/articles/<source_id>')
 def articles(source_id):
 
     """View articles page function that returns articles from a selected source."""
 
-    articles = get_articles(source_id)
+    articles_list = get_articles(source_id)
     
 
-    return render_template('movie.html',articles = articles)
+    return render_template('articles.html',articles_list = articles_list)
