@@ -7,21 +7,11 @@ class Config:
 
 
 class ProdConfig(Config):
-    """
-    Production  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    """
-    pass
+    """Production  configuration child class"""
+    NEWS_API_KEY = "7f464afbc50c446ea2cc7c94a9bd334f"
 
 
 class DevConfig(Config):
-    """
-    Development  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    """
+    """Development  configuration child class"""
 
     DEBUG = True
