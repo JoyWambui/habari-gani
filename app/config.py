@@ -8,7 +8,6 @@ class Config:
 
 class ProdConfig(Config):
     """Production  configuration child class"""
-    NEWS_API_KEY = "7f464afbc50c446ea2cc7c94a9bd334f"
 
 
 class DevConfig(Config):

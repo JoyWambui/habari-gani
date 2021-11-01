@@ -1,10 +1,10 @@
-{% macro displaySources() %}
+{% macro displaySources(sources_list) %}
 
     {% for news_source in sources_list %}
         <ul>
-            <li>News Source Name: {{news_source.name}}</li>
+            <li>Name: {{news_source.name}}</li>
             <li>Description: {{news_source.description}}</li>
-            <li>Website: {{news_source.url}}</li>
+            <li>Website: <a href="{{news_source.url}}">{{news_source.url}}</a></li>
             <li>Type of News: {{news_source.category}}</li>
             <li>Country of Origin: {{news_source.country}}</li>
         </ul>

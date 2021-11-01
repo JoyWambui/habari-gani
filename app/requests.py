@@ -1,4 +1,5 @@
 from app import app
+import urllib.request,json
 from .models import source
 Source = source.Source
 
@@ -13,10 +14,10 @@ def get_sources():
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
 
-        source_results = None
+        sources_results = None
 
-        if get_sources_response['results']:
-            sources_results_list = get_sources_response['results']
+        if get_sources_response['sources']:
+            sources_results_list = get_sources_response['sources']
             sources_results = process_results(sources_results_list)
 
 
