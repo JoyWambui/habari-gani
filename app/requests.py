@@ -1,5 +1,7 @@
 from app import app
 import urllib.request,json
+
+from app.article_test import Article
 from .models import source
 Source = source.Source
 
@@ -39,3 +41,26 @@ def process_results(sources_list):
         sources_results.append(source_object)
 
     return sources_results
+
+def get_articles(source_id):
+    "Function that returns articles from a selected news source"
+    get_articles_url = "https://newsapi.org/v2/everything?sources={}&apiKey={}".format(source_id,api_key)
+    
+    with urllib.request.urlopen(get_articles_url) as url:
+        source_articles_data = url.read()
+        source_articles_response = json.loads(source_articles_data)
+
+        articles_results = []
+        if source_articles_data:
+            author = source_articles_response.get("author")
+            article_title = source_articles_response.get("title")
+            article_description = source_articles_response.get("description")
+            article_url = source_articles_response.get("url")
+            image_url = source_articles_response.get("urlToImage")
+            published = source_articles_response.get("publishedAt") 
+            
+            if image_url:
+                articles_object = Article(author,article_title,article_description,article_url,image_url,published)
+                articles_results.append(articles_object)
+
+    return articles_results
