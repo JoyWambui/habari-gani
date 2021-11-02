@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/404.css')}}">
+{% endblock %}
+
+
+{% block content %}
+<div class="mainbox">
+    <div class="err">4</div>
+    <div class="err2">0</div>
+    <div class="err3">4</div>
+    <div class="msg">Maybe this page moved? Got deleted? Is stuck in quarantine? Never existed in the first place?<p>Let's go <a href="/">home</a> and try from there.</p></div>
+</div>
+{% endblock %}

@@ -35,12 +35,22 @@ h1{
 h1::after{
     content: '';
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     vertical-align: text-top;
-    border-radius: 30px 50px 15px;
+    border-radius: 30px 15px 50px 50px;
     background-color: #69b6d5;
 }
+h1::before{
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: text-bottom;
+    border-radius: 15px 30px 50px 50px;
+    background-color: #69b6d5;
+}
+
 h2{
     font-size: 6em;
     text-align: center;
