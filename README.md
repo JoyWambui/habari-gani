@@ -18,7 +18,7 @@
    8. Run: chmod a+x start.sh
    9. Finally run your app using: ./start.sh
 ## Link to Live Site
- [ HABARI-GANI](https://build-hero-squads.herokuapp.com/)
+ [ HABARI-GANI](https://habari-gani.herokuapp.com/)
 
 ## Technologies Used
 -Python
