@@ -1,0 +1,38 @@
+h2{
+   font-size: 5em;
+   text-align: center;
+   text-decoration: underline; 
+}
+h3{
+    text-decoration: underline;
+    font-size: 2.5em;
+}
+h4{
+    font-size:2em;
+}
+h5{
+    font-size: 1.8em;
+}
+p{
+    font-size: 1.8em;
+}
+.link-btn{
+    background-color: #1261A0;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 2em;
+    border-radius: 25px;
+}
+.link-btn:hover {
+    background-color:white;
+    border: 1px solid #1261A0;
+    text-decoration: none;
+  }
+
+.card{
+    margin: 10% 15% ;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    width: 75%;
+}
+
