@@ -1,13 +1,19 @@
 {% macro displaySources(sources_list) %}
 
     {% for news_source in sources_list %}
-        <ul>
-            <li>Name: <a href="articles/{{news_source.id}}">{{news_source.name}}</a></li>
-            <li>Description: {{news_source.description}}</li>
-            <li>Website: <a href="{{news_source.url}}">{{news_source.url}}</a></li>
-            <li>Type of News: {{news_source.category}}</li>
-            <li>Country of Origin: {{news_source.country}}</li>
-        </ul>
+      
+        <div class="card ">
+            <div class="card-body">
+                <h3 class="card-title text-center">{{news_source.name}}</h3>
+                <p class="card-text">{{news_source.description}}</p>
+                <p class="card-text">Website: <a href="{{news_source.url}}">{{news_source.url}}</a></p>
+                <p class="card-text">Type of News: {{news_source.category}}</p>
+                <p class="card-text">Country of Origin: {{news_source.country}}</p>
+                <div class="link">
+                    <a href="articles/{{news_source.id}}" class="link-btn">View Articles</a>
+                </div>
+            </div>
+          </div>
     {% endfor %}
 
 {% endmacro %}

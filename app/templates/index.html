@@ -1,8 +1,16 @@
 {% extends "base.html"%}
 {% import 'macros.html' as macro%}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
 
 {% block content %}
-<h2>Available News Sources:</h2>
+<div class="heading">
+    <h1>HABARI-GANI</h1>
+</div>
+<h2>News Sources:</h2>
     {{ macro.displaySources(sources)}}
 
 
