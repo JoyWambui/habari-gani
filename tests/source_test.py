@@ -1,7 +1,5 @@
 import unittest
-from models import source
-Source = source.Source
-
+from app.models import Source
 class SourceTest(unittest.TestCase):
     """Test Class to test the behaviour of the Source class"""
 
@@ -21,7 +19,3 @@ class SourceTest(unittest.TestCase):
         self.assertEqual(self.new_source.url,"https://www.bbc.com/")
         self.assertEqual(self.new_source.category, "General")
         self.assertEqual(self.new_source.country, "UK")
-
-
-if __name__ == '__main__':
-    unittest.main()
